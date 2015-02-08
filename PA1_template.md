@@ -41,11 +41,12 @@ for(i in 1:288){
 
 ## What is the mean total number of steps taken per day?
 
-Let's make a histogram of the total number of steps taken each day. Note that it really is a barplot, not a histogram. Sorry about this, but I couldn't find the way to make a histogram showing the required information. I think the barplot is adequate because it shows the same information. 
+Let's make a histogram of the total number of steps taken each day. 
 
 
 ```r
-barplot(daily_steps$steps, ylab="Number of steps per day", xlab="Date")
+hist(daily_steps$steps, breaks=30, xlab="Number of steps take each day", col="gray", 
+     main="")
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
@@ -152,7 +153,8 @@ for(i in 1:length(levels(data$date))){
 Histogram of total number of steps taken each day.
 
 ```r
-barplot(complete_ds$steps, ylab="Number of steps per day", xlab="Date")
+hist(complete_ds$steps, breaks=30, xlab="Number of steps taken each day", col="gray",
+     main= "")
 ```
 
 ![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png) 
